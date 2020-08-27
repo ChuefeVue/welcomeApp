@@ -6,7 +6,7 @@ import Clock from "./components/clock/Clock";
 import Contact from "./components/contact/Contact";
 import Navigation from "./components/navigation/Navigation";
 import NoRoute from "./components/noRoute/NoRoute";
-
+import { Switch } from "react-router-dom";
 import getTodo from "./services/todoService";
 getTodo(1);
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <switch>
+      <Switch>
         <Route
           exact
           path="/"
@@ -30,7 +30,7 @@ function App() {
         <Route path="/clock" component={Clock} />
         <Route path="/contact" component={Contact} />
         <Route path="/:id" component={NoRoute} />
-      </switch>
+      </Switch>
     </div>
   );
 }
